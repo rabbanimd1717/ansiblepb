@@ -1,6 +1,9 @@
 - name: varibales
   hosts: localhost
+  vars:
+    course: ansible
+    trainer: shiva
   tasks:
-    - name: varibales
+    - name: print information of variables
       ansible.builtin.debug:
-        msg: "This is variables ansible task1 and learning from trainer shiva"
+        msg: "This is variables {{course}} task1 and learning from trainer {{trainer}}"
