@@ -1,0 +1,12 @@
+- name: variables
+  hosts: 
+  vars:
+    cousre: Terraform
+    Trainer: abhishek
+  tasks:
+    - name: printing the value of variables from task-1
+      vars:
+        course: ansible
+        Trainer: shiva
+      ansible.builtin.dnf:
+        msg: "Hi, im learning {{course}} and trainer from {{Trainer}}"
