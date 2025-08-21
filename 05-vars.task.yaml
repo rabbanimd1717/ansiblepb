@@ -8,5 +8,5 @@
       vars:
         course: ansible
         Trainer: shiva
-      ansible.builtin.dnf:
+      ansible.builtin.debug:
         msg: "Hi, im learning {{course}} and trainer from {{Trainer}}"
