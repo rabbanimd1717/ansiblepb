@@ -1,0 +1,6 @@
+- name: varibales
+  hosts: localhost
+  tasks:
+    - name: varibales
+      ansible.builtin.debug:
+        msg: "This is variables ansible task1 and learning from trainer shiva"
