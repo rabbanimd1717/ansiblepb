@@ -1,5 +1,5 @@
 - name: variables
-  hosts: 
+  hosts: localhost
   vars:
     cousre: Terraform
     Trainer: abhishek
