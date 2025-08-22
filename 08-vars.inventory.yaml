@@ -3,4 +3,4 @@
   tasks: 
   - name: printing value of inventory variables
     ansible.builtin.debug:
-      msg: "Hi this is inventory variable course {{Course}} from Trainer {{Trainer}}"
+      msg: "Hi this is inventory variable course {{Course}} from Trainer {{Trainer}} duration is {duration}"
