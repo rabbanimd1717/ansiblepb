@@ -4,5 +4,7 @@
     Wishes: "Morning from PLAY variable"
   tasks:
     - name: Variables preferences
+      vars:
+        Wishes: "Morning from Task Variable"
       ansible.builtin.debug:
         msg: "Good {{Wishes}}"
