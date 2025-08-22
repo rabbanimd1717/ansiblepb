@@ -1,5 +1,8 @@
 - name: variables preference
   hosts: localhost
+  vars_prompt:
+  - name: Wishes
+    prompt: Enter your wishes
   vars:
     Wishes: "Morning from PLAY variable"
   vars_files:
