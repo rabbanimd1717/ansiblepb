@@ -5,4 +5,4 @@
     vars:
       Duration: 3months
     ansible.builtin.debug:
-      msg: "Hi this is inventory variable course {{Course}} from Trainer {{Trainer}} duration is {{Duration}"
+      msg: "Hi this is inventory variable course {{Course}} from Trainer {{Trainer}} duration is {{Duration}}"
