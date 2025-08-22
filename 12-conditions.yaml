@@ -5,7 +5,14 @@
   - name: check user exist or not
     ansible.builtin.command: id expense
     ignore_errors: yes
-    
+    register: USER    # to capture and store the output of a task into a variable
+
+
+  - name: print user information
+    ansible.builtin.debug:
+     msg: "User info is {{USER}}" 
+
+
   - name: Just testing purpose
     ansible.builtin.debug:
       msg: "Hello"
