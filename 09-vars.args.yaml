@@ -1,0 +1,6 @@
+- name: variables
+  hosts: localhost
+  tasks: 
+  - name: variables passing from arguments
+    ansible.builtin.debug:
+      msg: "Hi, this is variables paasing from arguments course is {{Course}} and Trainer is {{Trainer}}"
