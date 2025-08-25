@@ -28,8 +28,7 @@
   become: yes
   tasks:
   - name: check user exist or not
-    ansible.builtin.command: id expense
-    ignore_errors: yes
+    ansible.builtin.command: id rabbani
 
 
   - name: sample message
