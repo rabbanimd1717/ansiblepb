@@ -1,22 +1,36 @@
+# - name: conditions
+#   hosts: web
+#   become: yes
+#   tasks:
+#   - name: check user exist or not
+#     ansible.builtin.command: id expense
+#     ignore_errors: yes
+#     register: USER    # to capture and store the output of a task into a variable
+
+
+#   - name: print user information
+#     ansible.builtin.debug:
+#      msg: "User info is {{USER}}" 
+
+#   - name: Create user
+#     ansible.builtin.command: useradd expense
+#     when: USER.rc !=0 #condition
+
+
+#   - name: Just testing purpose
+#     ansible.builtin.debug:
+#       msg: "Hello"
+
+
+
 - name: conditions
   hosts: web
   become: yes
   tasks:
   - name: check user exist or not
     ansible.builtin.command: id expense
-    ignore_errors: yes
-    register: USER    # to capture and store the output of a task into a variable
 
 
-  - name: print user information
+  - name: sample message
     ansible.builtin.debug:
-     msg: "User info is {{USER}}" 
-
-  - name: Create user
-    ansible.builtin.command: useradd expense
-    when: USER.rc !=0 #condition
-
-
-  - name: Just testing purpose
-    ansible.builtin.debug:
-      msg: "Hello"
+      msg: "Hi Rabbani this is conditions playbook"
