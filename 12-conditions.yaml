@@ -39,8 +39,7 @@
   - name: Create rabbani user
     ansible.builtin.command: useradd rabbani
     when: USER.rc !=0 
-    ansible.builtin.debug:
-      msg: "user created"
+    
 
 
 
