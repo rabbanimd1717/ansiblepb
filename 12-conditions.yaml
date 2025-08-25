@@ -30,6 +30,9 @@
   - name: check user exist or not
     ansible.builtin.command: id rabbani
     ignore_errors: yes
+    register: USER
+
+
 
 
   - name: sample message
