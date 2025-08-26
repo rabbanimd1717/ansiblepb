@@ -11,7 +11,7 @@
   hosts: localhost
   become: yes
   vars:
-    greeting: hello good morning
+    greeting: "hello good morning"
   tasks: 
   - name: convert to upper case
     ansible.builtin.debug:
