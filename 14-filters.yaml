@@ -65,3 +65,20 @@
   - name: After conersion
     ansible.builtin.debug:
       msg: "After conversion: {{ dict | dict2items }}"
+
+
+- name: convert from items to dictionary
+  hosts: localhost
+  become: yes
+  vars:
+    my_items:
+    - Linux
+    - Shell
+    - Ansible
+  tasks: 
+  - name: Before conversion
+    ansible.builtin.debug:
+      msg: "Before conversion: {{ my_items }}"
+  - name: After conversion
+    ansible.builtin.debug:
+      msg: "After conversion: {{ my_items | items2dict }}"
