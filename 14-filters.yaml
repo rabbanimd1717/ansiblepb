@@ -26,3 +26,14 @@
   - name: convert the lower case
     ansible.builtin.debug:
       msg: " {{ greeting | lower }}"
+
+
+- name: Unique value
+  hosts: localhost
+  become: yes
+  vars:
+    numbers: [1, 2, 2, 3, 3, 1, 4, 5, 7, 6, 7, 6, 5]
+  tasks:
+  - name: remove duplicates and set unique value
+    ansible.builtin.debug:
+      msg: "unqiue values is {{ numbers | unique }}"
