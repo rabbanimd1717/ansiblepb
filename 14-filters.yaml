@@ -37,3 +37,14 @@
   - name: remove duplicates and set unique value
     ansible.builtin.debug:
       msg: "unqiue values is {{ numbers | unique }}"
+
+
+- name: max and min values
+  hosts: localhost
+  become: yes
+  vars:
+    age_values: [26, 50, 55, 80]
+  tasks:
+  - name: print max and min age values
+    ansible.builtin.debug:
+      msg: "min value: {{ age_values | min }} and max value: {{ age_values | max }}"
