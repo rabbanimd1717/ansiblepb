@@ -72,9 +72,12 @@
   become: yes
   vars:
     my_items:
-    - Course: Linux
-    - Course: Shell
-    - Course: Ansible
+    - key: course
+      value: Linux
+    - key: Course
+      value: Shell
+    - key: Course
+      value: Ansible
   tasks: 
   - name: Before conversion
     ansible.builtin.debug:
