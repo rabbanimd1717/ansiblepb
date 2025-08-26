@@ -5,3 +5,14 @@
   - name: forgot to set the variable value using the this filters of default value
     ansible.builtin.debug:
       msg: "Hello this course is {{ Course | default('ansible') }}"
+
+
+- name: Upper case
+  hosts: localhost
+  become: yes
+  vars:
+    greeting: hello good morning
+  tasks: 
+  - name: convert to upper case
+    ansible.builtin.debug:
+      msg: "{{ greeting | upper case }}"
