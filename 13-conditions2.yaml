@@ -1,0 +1,18 @@
+- name: functions/filters--data manipulation or transformation
+  hosts: localhost
+  become: yes
+  vars_prompt:
+  - name: NUMBER
+    prompt: Please Enter The NUMBER
+    private: no
+  tasks:
+  - name: enter number is less than 20
+    ansible.builtin.debug:
+      msg: "Number is {{ NUMBER }} is less than 20"
+    when: NUMBER < 10
+
+
+  - name: enter number is greater than 20
+    ansible.builtin.debug:
+      msg: "Enter number is {{ NUMBER }} is greater than 20"
+    when: NUMBER >= 10
